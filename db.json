@@ -21,11 +21,60 @@
   ],
   "products": [
     {
-      "product": "Hamburguer",
-      "image": "https://s3-alpha-sig.figma.com/img/bb0c/a182/55225f534ef7e57de0892c7de864a767?Expires=1636934400&Signature=LjzeNAK2IND8oVeu2rKh79K9fpU4tHNunQ9-g~Jdza5Or3WBeHOTHE8kkm46TzEh4uqv4HYqYoaxlKa26AgBlrPCeV6XZa5UC~oUIHiC6wv1gI6V10J4dp6O-sx0uFemDDTcbquyUKBq~TvuNsGWlNsis-~oREwLiHHnVxNcwLkxvK4ETyg~dMHJzexVOQZp65tctarQM6bdRthEk8kZpWx9VcfWa00KctwAWHnaqIrJX040FWeumZCz-N2D0ZHnumYOKaZKS1KPW1XardJ2wojAKMaC0WYQDGH6Hvj09pte1DMVmh8WC~XED68LEooFpnrBGOplSVOq56zEYsUh3g__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA",
+      "image": "https://i.ibb.co/FHh5Cc8/hamburguer.png",
+      "title": "Hamburguer",
       "category": "Sanduíches",
       "price": 14,
       "id": 1
+    },
+    {
+      "image": "https://i.ibb.co/wy0BjYh/xburguer.png",
+      "title": "X-Burguer",
+      "category": "Sanduíches",
+      "price": 16,
+      "id": 2
+    },
+    {
+      "image": "https://i.ibb.co/dQCBhxS/bigkenzie.png",
+      "title": "Big Kenzie",
+      "category": "Sanduíches",
+      "price": 18,
+      "id": 3
+    },
+    {
+      "image": "https://i.ibb.co/ZYr9G8h/combokenzie.png",
+      "title": "Combo Kenzie",
+      "category": "Combos",
+      "price": 26,
+      "id": 4
+    },
+    {
+      "image": "https://i.ibb.co/MMddrWd/fantaguarana.png",
+      "title": "Fanta Guaraná",
+      "category": "Bebidas",
+      "price": 5,
+      "id": 5
+    },
+    {
+      "image": "https://i.ibb.co/tHVczNt/cocacola.png",
+      "title": "Coca-Cola",
+      "category": "Bebidas",
+      "price": 7,
+      "id": 6
+    },
+    {
+      "image": "https://i.ibb.co/PChgTpp/ovomaltine.png",
+      "title": "McShake Ovomaltine",
+      "category": "Sobremesas",
+      "price": 10,
+      "id": 7
+    },
+    {
+      "image": "https://i.ibb.co/mq8gMpH/shakeovomaltine.png",
+      "title": "McShake Nutella",
+      "category": "Sobremesas",
+      "price": 10,
+      "id": 8
     }
   ],
   "cart": []

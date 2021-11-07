@@ -3,34 +3,74 @@
                                             O url base da API é https://hamburkenzie.herokuapp.com/
 
                                                                 ENDPOINTS:
-                                                                /users/login/
-                                                                /users/register/
+                                                                /login/
+                                                                /register/
                                                                 /cart/
                                                                 /products/
 
 
 ____________________________________________________________________________________________________________________________________________________________
-Para fazer a criação de um novo usuário: 
 
-POST /users/register/ - FORMATO DA REQUISIÇÃO
+Assim como a documentação do JSON-Server-Auth traz (https://www.npmjs.com/package/json-server-auth), existem 3 endpoints que podem ser utilizados para cadastro e 2 endpoints que podem ser usados para login.
+
+Cadastro
+POST /register
+POST /signup
+POST /users
+
+CORPO DA REQUISIÇÃO:
+
 {
 "email": "johndoe@email.com",
 "password": "123456",
 "name": "John Doe"
 }
 
-____________________________________________________________________________________________________________________________________________________________
-Login do usuário: 
+RESULTADO ESPERADO:
 
-POST /users/login/ - FORMATO DA REQUISIÇÃO
+{
+  "accessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RlQG9paS5jb20iLCJpYXQiOjE2MzYzMTgzNTgsImV4cCI6MTYzNjMyMTk1OCwic3ViIjoiNSJ9.lfhWHqUMz7T2R2i-IATV6YEyKA6-dITIBUEEwACFByY",
+  "user": {
+    "email": "johndoe@email.com",
+    "name": "John Doe"
+    "id": 1
+  }
+}
+
+Qualquer um desses 3 endpoints irá cadastrar o usuário na lista de "Users", sendo que os campos obrigatórios são os de email e password. Você pode ficar a vontade para adicionar qualquer outra propriedade no corpo do cadastro dos usuários.
+
+_____________________________________________________________________________________________________________________________________________________________
+
+Login
+POST /login
+POST /signin
+
+CORPO DA REQUISIÇÃO
+
 {
 "email": "johndoe@email.com",
 "password": "123456",
 }
+
+RESULTADO ESPERADO
+
+{
+  "accessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Imtra0Bra2suY29tIiwiaWF0IjoxNjM2MzE4OTI2LCJleHAiOjE2MzYzMjI1MjYsInN1YiI6IjYifQ.5ig3xQkws3FW83F4pOPM-vo_Ptw2WxjynhbT9gp9j8E",
+  "user": {
+    "email": "johndoe@email.com",
+    "name": "John",
+    "id": 1
+  }
+}
+
+Qualquer um desses 2 endpoints pode ser usado para realizar login com um dos usuários cadastrados na lista de "Users"
+
+
 ____________________________________________________________________________________________________________________________________________________________
+
 Obter a lista de todos os produtos disponíveis na loja mesmo sem estar logado
 
-GET /products/ 
+GET /products - FORMATO DE RESPOSTA - STATUS 200
 
 ____________________________________________________________________________________________________________________________________________________________
 
@@ -53,7 +93,7 @@ POST /cart/   FORMATO DA REQUISIÇÃO
 
 {
      "product": "McShake Nutella",
-      "image": "https://s3-alpha-sig.figma.com/img/1418/8d02/bff95df5c4ffe3b30eb1fc1d20d11c67?Expires=1636934400&Signature=V~Gg~czQ8Ite9oRrZb9KATPcDSYuylX9pydWe3QLrCqL~ji6nY-i7yh1g-Y8ZymVDujBIL8U4kMrKLbkX~5iKsKPmYeGTLabX9IGay2dOnuCCsI~BCHmmkZmSNL7uL0kzwCenc1lE4JKfoukbfsVQ2X4z5YimJq5NzU~xSrDLVt7Rs0-8wdH-jT3q8OxmTdo7~zbmShUqcK3aryBsxk-FKgTwklzJ~XYmnBsQotrOD8QeLuxSG4Yv3eDelzKPOxkB5O6D38yxrleLXqF~vbo4EtWUC-8gcYSyfJsWcO-tSRhbWyZeUOu~hGA-tvfBe2HLah3G6rvE57cQfJejq7C4Q__&Key-Pair-Id=APKAINTVSUGEWH5XD5UA",
+      "image": "https://i.ibb.co/mq8gMpH/shakeovomaltine.png",
       "category": "Sobremesas",
       "price": 10,
       "userId": 8,
@@ -75,4 +115,4 @@ PATCH /cart/:id
 
 Para REMOVER algum item do teu carrinho, informe no corpo da requisição o id de usuário (userId)
 
-DELETE /cart/:id
+DELETE /cart/:id  
