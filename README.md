@@ -70,11 +70,74 @@ ________________________________________________________________________________
 
 Obter a lista de todos os produtos disponíveis na loja mesmo sem estar logado
 
+SEM CORPO E SEM AUTORIZAÇÃO,
+RESPOSTA ESPERADA
+
+[
+  {
+    "image": "https://i.ibb.co/FHh5Cc8/hamburguer.png",
+    "title": "Hamburguer",
+    "category": "Sanduíches",
+    "price": 14,
+    "id": 1
+  },
+  {
+    "image": "https://i.ibb.co/wy0BjYh/xburguer.png",
+    "title": "X-Burguer",
+    "category": "Sanduíches",
+    "price": 16,
+    "id": 2
+  },
+  {
+    "image": "https://i.ibb.co/dQCBhxS/bigkenzie.png",
+    "title": "Big Kenzie",
+    "category": "Sanduíches",
+    "price": 18,
+    "id": 3
+  },
+  {
+    "image": "https://i.ibb.co/ZYr9G8h/combokenzie.png",
+    "title": "Combo Kenzie",
+    "category": "Combos",
+    "price": 26,
+    "id": 4
+  },
+  {
+    "image": "https://i.ibb.co/MMddrWd/fantaguarana.png",
+    "title": "Fanta Guaraná",
+    "category": "Bebidas",
+    "price": 5,
+    "id": 5
+  },
+  {
+    "image": "https://i.ibb.co/tHVczNt/cocacola.png",
+    "title": "Coca-Cola",
+    "category": "Bebidas",
+    "price": 7,
+    "id": 6
+  },
+  {
+    "image": "https://i.ibb.co/PChgTpp/ovomaltine.png",
+    "title": "McShake Ovomaltine",
+    "category": "Sobremesas",
+    "price": 10,
+    "id": 7
+  },
+  {
+    "image": "https://i.ibb.co/mq8gMpH/shakeovomaltine.png",
+    "title": "McShake Nutella",
+    "category": "Sobremesas",
+    "price": 10,
+    "id": 8
+  }
+]
+
 GET /products - FORMATO DE RESPOSTA - STATUS 200
 
 ____________________________________________________________________________________________________________________________________________________________
 
         Rotas que necessitam de autorização!
+
 ADICIONAR produto ao carrinho           POST     /cart/
 LISTAR produtos no carrinho             GET      /cart/?userId=id
 RETIRAR produto do carrinho             DELETE   /cart/:id
@@ -83,7 +146,6 @@ ATUALIZAR quantidade do produto         PATCH    /cart/id
 
 Necessitam de autorização e devem ser informado no cabeçalho da requisição o campo "Authorization", dessa forma:
 Authorization: Bearer {token}
-
 Após o usuário estar logado, ele deve conseguir ver o que tem em seu carrinho de compras e adicionar mais produtos à ele.
 
 
