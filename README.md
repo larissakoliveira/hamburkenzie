@@ -140,7 +140,7 @@ ________________________________________________________________________________
 
 ADICIONAR produto ao carrinho           POST     /cart/
 LISTAR produtos no carrinho             GET      /cart/?userId=id
-RETIRAR produto do carrinho             DELETE   /cart/:id
+RETIRAR produto do carrinho             DELETE   /cart/id
 ATUALIZAR quantidade do produto         PATCH    /cart/id     
 
 
