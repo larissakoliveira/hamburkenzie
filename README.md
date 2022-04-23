@@ -2,11 +2,11 @@
 
                                             O url base da API é https://hamburkenzie.herokuapp.com/
 
-                                                                ENDPOINTS:
-                                                                /login/
-                                                                /register/
-                                                                /cart/
-                                                                /products/
+                                                            ENDPOINTS:
+                                                              /login/
+                                                              /register/
+                                                              /cart/
+                                                              /products/
 
 
 ____________________________________________________________________________________________________________________________________________________________
