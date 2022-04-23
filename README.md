@@ -11,7 +11,7 @@
 
 ____________________________________________________________________________________________________________________________________________________________
 
-# Fake API Json-Server feita para uso em um projeto <a href="https://github.com/Kenzie-Academy-Brasil-Developers/react-entrega-s5-hamburgueria-2-0-com-typescript-json-server-larissakoliveira">HamburKenzie</a>
+### Fake API Json-Server feita para uso no meu e-commerce da <a href="https://github.com/Kenzie-Academy-Brasil-Developers/react-entrega-s5-hamburgueria-2-0-com-typescript-json-server-larissakoliveira">HamburKenzie</a>
 
 ### Assim como a documentação do <a href="https://www.npmjs.com/package/json-server-auth">JSON-Server-Auth</a> traz, existem 3 endpoints que podem ser utilizados para cadastro e 2 endpoints que podem ser usados para login.
 
@@ -20,7 +20,7 @@ POST /register
 POST /signup
 POST /users
 
-CORPO DA REQUISIÇÃO:
+##### CORPO DA REQUISIÇÃO:
 
 ```json 
 {
@@ -30,7 +30,7 @@ CORPO DA REQUISIÇÃO:
 }
 ```
 
-RESULTADO ESPERADO:
+##### RESULTADO ESPERADO:
 ```json 
 {
   "accessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RlQG9paS5jb20iLCJpYXQiOjE2MzYzMTgzNTgsImV4cCI6MTYzNjMyMTk1OCwic3ViIjoiNSJ9.lfhWHqUMz7T2R2i-IATV6YEyKA6-dITIBUEEwACFByY",
@@ -50,7 +50,7 @@ Login
 POST /login
 POST /signin
 
-CORPO DA REQUISIÇÃO
+##### CORPO DA REQUISIÇÃO
 ```json 
 {
 "email": "johndoe@email.com",
@@ -73,7 +73,7 @@ CORPO DA REQUISIÇÃO
 
 ____________________________________________________________________________________________________________________________________________________________
 
-Obter a lista de todos os produtos disponíveis na loja mesmo sem estar logado
+#### Obter a lista de todos os produtos disponíveis na loja mesmo sem estar logado
 
 SEM CORPO E SEM AUTORIZAÇÃO,
 RESPOSTA ESPERADA
@@ -141,7 +141,7 @@ GET /products - FORMATO DE RESPOSTA - STATUS 200
 
 ____________________________________________________________________________________________________________________________________________________________
 
-        Rotas que necessitam de autorização!
+####        Rotas que necessitam de autorização!
 
 ADICIONAR produto ao carrinho           POST     /cart/
 LISTAR produtos no carrinho             GET      /cart/?userId=id
@@ -154,10 +154,10 @@ Authorization: Bearer {token}
 Após o usuário estar logado, ele deve conseguir ver o que tem em seu carrinho de compras e adicionar mais produtos à ele.
 
 
-Para ADICIONAR produto ao carrinho, informe no corpo da requisição o id de usuário (userId)
+#### Para ADICIONAR produto ao carrinho, informe no corpo da requisição o id de usuário (userId)
 
 POST /cart/   FORMATO DA REQUISIÇÃO
-
+```json 
 {
      "product": "McShake Nutella",
       "image": "https://i.ibb.co/mq8gMpH/shakeovomaltine.png",
@@ -166,20 +166,20 @@ POST /cart/   FORMATO DA REQUISIÇÃO
       "userId": 8,
       "quantity": 1,
     }
-
-Para VISUALIZAR seu carrinho, informe no corpo da requisição o id de usuário (userId)
+```
+#### Para VISUALIZAR seu carrinho, informe no corpo da requisição o id de usuário (userId)
 
 GET /cart/?userId=id
 
-Para ATUALIZAR quantidade de algum produto no teu carrinho, informe no corpo da requisição a quantidade
+#### Para ATUALIZAR quantidade de algum produto no teu carrinho, informe no corpo da requisição a quantidade
 
 PATCH /cart/:id
-
+```json 
     {
       "quantity": 2,
     }
+```
 
-
-Para REMOVER algum item do teu carrinho, informe no corpo da requisição o id de usuário (userId)
+#### Para REMOVER algum item do teu carrinho, informe no corpo da requisição o id de usuário (userId)
 
 DELETE /cart/:id  
