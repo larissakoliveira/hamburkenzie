@@ -11,9 +11,9 @@
 
 ____________________________________________________________________________________________________________________________________________________________
 
-# Fake API Json-Server feita para uso em um projeto <a href="https://github.com/Kenzie-Academy-Brasil-Developers/react-entrega-s5-hamburgueria-2-0-com-typescript-json-server-larissakoliveira">link</a>
+# Fake API Json-Server feita para uso em um projeto <a href="https://github.com/Kenzie-Academy-Brasil-Developers/react-entrega-s5-hamburgueria-2-0-com-typescript-json-server-larissakoliveira">HamburKenzie</a>
 
-### Assim como a documentação do JSON-Server-Auth traz (https://www.npmjs.com/package/json-server-auth), existem 3 endpoints que podem ser utilizados para cadastro e 2 endpoints que podem ser usados para login.
+### Assim como a documentação do <a href="https://www.npmjs.com/package/json-server-auth">JSON-Server-Auth</a> traz, existem 3 endpoints que podem ser utilizados para cadastro e 2 endpoints que podem ser usados para login.
 
 Cadastro
 POST /register
