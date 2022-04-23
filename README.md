@@ -20,14 +20,16 @@ POST /users
 
 CORPO DA REQUISIÇÃO:
 
+```json 
 {
-"email": "johndoe@email.com",
-"password": "123456",
-"name": "John Doe"
+  "email": "johndoe@email.com",
+  "password": "123456",
+  "name": "John Doe"
 }
+```
 
 RESULTADO ESPERADO:
-
+```json 
 {
   "accessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6InRlc3RlQG9paS5jb20iLCJpYXQiOjE2MzYzMTgzNTgsImV4cCI6MTYzNjMyMTk1OCwic3ViIjoiNSJ9.lfhWHqUMz7T2R2i-IATV6YEyKA6-dITIBUEEwACFByY",
   "user": {
@@ -36,6 +38,7 @@ RESULTADO ESPERADO:
     "id": 1
   }
 }
+```
 
 Qualquer um desses 3 endpoints irá cadastrar o usuário na lista de "Users", sendo que os campos obrigatórios são os de email e password. Você pode ficar a vontade para adicionar qualquer outra propriedade no corpo do cadastro dos usuários.
 
