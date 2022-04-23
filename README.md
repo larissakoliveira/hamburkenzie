@@ -11,7 +11,7 @@
 
 ____________________________________________________________________________________________________________________________________________________________
 
-## Assim como a documentação do JSON-Server-Auth traz (https://www.npmjs.com/package/json-server-auth), existem 3 endpoints que podem ser utilizados para cadastro e 2 endpoints que podem ser usados para login.
+### Assim como a documentação do JSON-Server-Auth traz (https://www.npmjs.com/package/json-server-auth), existem 3 endpoints que podem ser utilizados para cadastro e 2 endpoints que podem ser usados para login.
 
 Cadastro
 POST /register
@@ -40,7 +40,7 @@ RESULTADO ESPERADO:
 }
 ```
 
-Qualquer um desses 3 endpoints irá cadastrar o usuário na lista de "Users", sendo que os campos obrigatórios são os de email e password. Você pode ficar a vontade para adicionar qualquer outra propriedade no corpo do cadastro dos usuários.
+#### Qualquer um desses 3 endpoints irá cadastrar o usuário na lista de "Users", sendo que os campos obrigatórios são os de email e password. Você pode ficar a vontade para adicionar qualquer outra propriedade no corpo do cadastro dos usuários.
 
 _____________________________________________________________________________________________________________________________________________________________
 
@@ -49,14 +49,14 @@ POST /login
 POST /signin
 
 CORPO DA REQUISIÇÃO
-
+```json 
 {
 "email": "johndoe@email.com",
 "password": "123456",
 }
-
-RESULTADO ESPERADO
-
+```
+#### RESULTADO ESPERADO
+```json 
 {
   "accessToken": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6Imtra0Bra2suY29tIiwiaWF0IjoxNjM2MzE4OTI2LCJleHAiOjE2MzYzMjI1MjYsInN1YiI6IjYifQ.5ig3xQkws3FW83F4pOPM-vo_Ptw2WxjynhbT9gp9j8E",
   "user": {
@@ -65,8 +65,8 @@ RESULTADO ESPERADO
     "id": 1
   }
 }
-
-Qualquer um desses 2 endpoints pode ser usado para realizar login com um dos usuários cadastrados na lista de "Users"
+```
+#### Qualquer um desses 2 endpoints pode ser usado para realizar login com um dos usuários cadastrados na lista de "Users"
 
 
 ____________________________________________________________________________________________________________________________________________________________
@@ -75,7 +75,7 @@ Obter a lista de todos os produtos disponíveis na loja mesmo sem estar logado
 
 SEM CORPO E SEM AUTORIZAÇÃO,
 RESPOSTA ESPERADA
-
+```json 
 [
   {
     "image": "https://i.ibb.co/FHh5Cc8/hamburguer.png",
@@ -134,7 +134,7 @@ RESPOSTA ESPERADA
     "id": 8
   }
 ]
-
+```
 GET /products - FORMATO DE RESPOSTA - STATUS 200
 
 ____________________________________________________________________________________________________________________________________________________________
